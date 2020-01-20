@@ -1,0 +1,16 @@
+name: Test the GitHub action in this Repository
+on: [push]
+
+jobs:
+  test_action_job:
+    runs-on: ubuntu-latest
+    name: Test the GitHub action in this Repository
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Test this Action
+      id: test-action
+      uses: ./
+      with:
+        replicated-app: 'kots-dex'
+        replicated-api-token: ${{ secrets.REPLICATED_API_TOKEN }}
