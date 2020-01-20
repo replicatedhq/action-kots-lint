@@ -1,0 +1,23 @@
+name: 'Replicated KOTS lint release'
+description: 'Lint KOTS application manifests'
+inputs:
+  replicated-app:
+    description: 'Replicated App Slug'
+    required: true
+    default: 'my-app-enterprise'
+  replicated-api-token:
+    description: 'Replicated API Token'
+    required: true
+    default: ''
+  yaml-dir:
+    description: 'Directory containing KOTS application manifests'
+    required: true
+    default: 'manifests'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - '/replicated release lint --yaml-dir=${{ inputs.yaml-dir }}'
+  env:
+    REPLICATED_APP: ${{ inputs.replicated-app }}
+    REPLICATED_API_TOKEN: ${{ inputs.replicated-api-token }}
