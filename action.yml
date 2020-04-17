@@ -13,11 +13,15 @@ inputs:
     description: 'Directory containing KOTS application manifests'
     required: true
     default: 'manifests'
+  extra-flags:
+    description: 'Any undocumented extra flags. This input will be added as is.'
+    required: false
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - '/replicated release lint --yaml-dir=${{ inputs.yaml-dir }}'
+    - '/replicated release lint --yaml-dir=${{ inputs.yaml-dir }} ${{ inputs.extra-flags }}'
   env:
     REPLICATED_APP: ${{ inputs.replicated-app }}
     REPLICATED_API_TOKEN: ${{ inputs.replicated-api-token }}
