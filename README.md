@@ -19,7 +19,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - uses: replicatedhq/action-kots-lintv0.2.0
+    - uses: replicatedhq/action-kots-lint@v0.1.0
       name: Lint the release manifests
       with:
         replicated-api-token: ${{ secrets.REPLICATED_API_TOKEN }}
