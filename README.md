@@ -35,7 +35,7 @@ The application slug or ID for this application. This can be found at [vendor.re
 
 #### replicated-api-token
 
-A Replicated Service Account API token (create one at vendor portal under [Service Accounts](https://vendor.replicated.com/team/serviceaccounts)).
+A Replicated Service Account API token. Create one in the vendor portal under [Service Accounts](https://vendor.replicated.com/team/serviceaccounts).
 
 #### yaml-dir
 
