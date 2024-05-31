@@ -1,2 +1,2 @@
-FROM replicated/vendor-cli:0.37.2
+FROM replicated/vendor-cli:0.76.1
 ENTRYPOINT ["/bin/sh", "-c"]
