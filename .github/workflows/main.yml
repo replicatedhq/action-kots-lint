@@ -12,5 +12,5 @@ jobs:
       id: test-action
       uses: ./
       with:
-        replicated-app: 'kots-dex'
+        replicated-app: 'action-kots-lint'
         replicated-api-token: ${{ secrets.REPLICATED_API_TOKEN }}
